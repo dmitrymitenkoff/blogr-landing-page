@@ -1,0 +1,19 @@
+@use '../utilities/colors' as *;
+@use '../utilities/fonts' as *;
+
+.site-head {
+  background-image: url('/images/bg-pattern-intro.svg'),
+    linear-gradient(135deg, $gradient-light-red 0%, $gradient-red 100%);
+  background-size: 400%, cover;
+  background-repeat: no-repeat;
+  background-position: top -18rem left -28rem, top center;
+  padding-top: clamp(3.5rem, 3.4rem + 4vh, 4rem);
+  padding-left: clamp(1.3rem, 1rem + 4vw, 10.4rem);
+  padding-right: clamp(1.3rem, 1rem + 4vw, 10.4rem);
+
+  &-navigation {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+}
