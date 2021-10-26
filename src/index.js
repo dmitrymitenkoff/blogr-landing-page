@@ -1,10 +1,20 @@
-const navButton = document.querySelector('.navigation-button');
+const button = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu-list');
 
-function toggleMenu() {
-  const expanded = navButton.getAttribute('aria-expanded');
-  navButton.setAttribute('aria-expanded', !expanded);
-  const menu = navButton.nextElementSibling;
-  menu.hidden = !menu.hidden;
+// Toggle menu open/close
+function toggleMenu(status) {
+  if (status === 'false') {
+    menu.removeAttribute('hidden');
+    button.setAttribute('aria-expanded', 'true');
+    button.setAttribute('aria-label', 'Close the menu');
+  } else {
+    menu.setAttribute('hidden', 'hidden');
+    button.setAttribute('aria-expanded', 'false');
+    button.setAttribute('aria-label', 'Open the menu');
+  }
 }
 
-navButton.addEventListener('click', toggleMenu);
+button.addEventListener('click', event => {
+  const status = button.getAttribute('aria-expanded');
+  toggleMenu(status);
+});
