@@ -33,7 +33,7 @@
         </button>
         <!-- </div> -->
 
-        <ul hidden class="menu-list" role="menu">
+        <ul id="menu-list" role="menu">
           <li class="dropdown" role="menuitem">
             <button
               type="button"
@@ -43,8 +43,9 @@
               role="menuitem"
             >
               Product
+              <div class="caret"></div>
             </button>
-            <ul class="dropdown__menu" id="product-dropdown">
+            <ul hidden class="dropdown__menu" id="product-dropdown">
               <li><a href="#">Overview</a></li>
               <li><a href="#">Pricing</a></li>
               <li><a href="#">Marketplace</a></li>
@@ -64,8 +65,9 @@
               role="menuitem"
             >
               Company
+              <div class="caret"></div>
             </button>
-            <ul class="dropdown__menu" id="company-dropdown">
+            <ul hidden class="dropdown__menu" id="company-dropdown">
               <li><a href="#">About</a></li>
               <li><a href="#">Team</a></li>
               <li><a href="#">Blog</a></li>
@@ -84,8 +86,9 @@
               role="menuitem"
             >
               Connect
+              <div class="caret"></div>
             </button>
-            <ul class="dropdown__menu" id="connect-dropdown">
+            <ul hidden class="dropdown__menu" id="connect-dropdown">
               <li><a href="#">Contact</a></li>
               <li><a href="#">Newsletter</a></li>
               <li><a href="#">LinkedIn</a></li>
