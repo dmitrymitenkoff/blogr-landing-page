@@ -1,0 +1,60 @@
+@use '../utilities/colors' as *;
+@use '../utilities/fonts' as *;
+
+.btn {
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.6;
+  text-align: center;
+  min-width: 10ch;
+  min-height: 44px;
+  padding: 0.5em 2em;
+  transition: 220ms all ease-in-out;
+
+  @media screen and (-ms-high-contrast: active) {
+    border: 2px solid currentcolor;
+  }
+
+  &:first-of-type {
+    color: $color-primary-headings;
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &:last-of-type {
+    background: linear-gradient(
+      135deg,
+      $gradient-light-red 0%,
+      $gradient-red 100%
+    );
+    border-radius: 1.75rem;
+    color: $color-primary-light;
+    font-family: $font-ubuntu;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+
+  &:hover:first-of-type,
+  &:active:first-of-type {
+    color: $color-cta-btn-hover;
+  }
+
+  &:hover:last-of-type,
+  &:active:last-of-type {
+    transform: scale(0.96);
+  }
+
+  &:focus {
+    outline-style: solid;
+    outline-color: transparent;
+    box-shadow: 0 0 0 4px $color-cta-btn;
+  }
+}

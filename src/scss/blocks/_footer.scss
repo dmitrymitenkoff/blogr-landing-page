@@ -1,0 +1,48 @@
+@use '../utilities/colors' as *;
+@use '../utilities/fonts' as *;
+@use '../utilities/mixins' as *;
+
+.footer {
+  background-color: $color-footer-bg;
+  border-top-right-radius: 6.25rem;
+
+  display: grid;
+  place-items: center;
+
+  &-nav {
+    display: flex;
+    flex-direction: column;
+
+    .footer-brand {
+      margin-bottom: 4.5rem;
+      padding-top: 4.7rem;
+    }
+
+    ul {
+      list-style: none;
+      margin-bottom: 2.5rem;
+      padding: 0;
+      text-align: center;
+
+      li {
+        margin-bottom: 0.5em;
+      }
+
+      a {
+        color: $color-primary-light;
+      }
+    }
+
+    button {
+      @include default-button;
+      justify-content: center;
+      color: $color-footer-text;
+      font-family: $font-ubuntu;
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 1.8;
+      margin-bottom: 1.3rem;
+      min-width: 10ch;
+    }
+  }
+}

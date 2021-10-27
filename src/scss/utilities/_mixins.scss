@@ -1,0 +1,16 @@
+// Background images - mobile view
+@mixin bg-images-mobile {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  max-width: 100%;
+  aspect-ratio: 1;
+}
+
+// Default button styles
+@mixin default-button {
+  background-color: transparent;
+  border: none;
+  display: inline-flex;
+  padding: 0;
+}

@@ -3,17 +3,19 @@ const menu = document.querySelector('#menu-list');
 const dropDownButtons = document.querySelectorAll('.dropdown__title');
 const carets = document.querySelectorAll('.caret');
 
-menu.classList.add('hidden');
+// menu.classList.add('hidden');
 
 // Toggle menu open/close
 function toggleMenu(status) {
   if (status === 'false') {
-    menu.classList.remove('hidden');
+    // menu.classList.remove('hidden');
+    menu.removeAttribute('hidden');
     menu.classList.add('grid');
     button.setAttribute('aria-expanded', 'true');
     button.setAttribute('aria-label', 'Close the menu');
   } else {
-    menu.classList.add('hidden');
+    //menu.classList.add('hidden');
+    menu.setAttribute('hidden', 'hidden');
     menu.classList.remove('grid');
     button.setAttribute('aria-expanded', 'false');
     button.setAttribute('aria-label', 'Open the menu');

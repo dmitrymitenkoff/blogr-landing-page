@@ -1,0 +1,62 @@
+@use '../utilities/colors' as *;
+@use '../utilities/fonts' as *;
+@use '../utilities/mixins' as *;
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+  width: 90%;
+
+  &__menu {
+    background-color: $color-menu-bg;
+    border-radius: 0.3rem;
+    list-style: none;
+    margin-top: 1.5rem;
+    padding-top: 1.1rem;
+    padding-bottom: 1.1rem;
+    padding-left: 0;
+
+    & li {
+      margin-bottom: 0.75rem;
+    }
+
+    & a {
+      transition: 220ms all ease-in-out;
+    }
+
+    & a:hover {
+      color: $gradient-gray-blue;
+    }
+  }
+
+  &__title {
+    @include default-button;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+
+    .caret {
+      background-image: url('/images/icon-arrow-dark.svg');
+      background-repeat: no-repeat;
+      display: inline-block;
+      width: 10px;
+      aspect-ratio: 1;
+    }
+
+    .caret.close {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__title,
+  &__menu a {
+    color: $color-primary-headings;
+    display: block;
+    font-family: $font-ubuntu;
+    font-size: 1.125rem;
+  }
+}

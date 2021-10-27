@@ -1,2 +1,37 @@
 @use '../utilities/colors' as *;
 @use '../utilities/fonts' as *;
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  position: relative;
+
+  #menu-list {
+    background-color: $color-primary-light;
+    border-radius: 0.3rem;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.243444);
+    list-style: none;
+    padding-top: 1.5rem;
+    padding-left: 0;
+    position: absolute;
+    top: 4rem;
+    width: 100%;
+
+    &.grid {
+      display: grid;
+      place-items: center;
+    }
+
+    li {
+      padding: 0;
+    }
+  }
+
+  hr {
+    height: 1px;
+    margin-bottom: 1.5rem;
+    color: $color-hr;
+    width: 90%;
+  }
+}
